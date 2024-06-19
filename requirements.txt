@@ -1,0 +1,19 @@
+pandas
+openpyxl
+python-Levenshtein
+scikit-learn
+# Requirements for API
+fastapi[all]~=0.110.2
+pydantic~=2.7.1
+sqlalchemy~=2.0.29
+python-dotenv~=1.0.1
+PyJWT~=2.8.0
+uvicorn~=0.29.0
+asyncpg~=0.29.0
+psycopg2~=2.9.9
+python-jose~=3.3.0
+requests~=2.31.0
+starlette~=0.37.2
+redis~=5.0.4
+pytz~=2024.1
+motor~=3.4.0
