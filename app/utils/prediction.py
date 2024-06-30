@@ -60,13 +60,11 @@ def load_and_predict(product_name):
         next_month_2_prediction = filtered_predicted_data['Next Month 2 Prediction'].values[0]
     else:
         print("Product not found.")
-    
-    print(next_month_1_prediction)
-    print(next_month_2_prediction)
-    print(total_may_sell)
+
 
     # Generate a random number within the range
-    random_number_1 = random.randint(total_may_sell, int(total_may_sell*1.5))
-    random_number_2 = random.randint(total_may_sell, int(total_may_sell*1.8))
+    error_clean_number_1 = random.randint(total_may_sell, int(total_may_sell*1.5))
+    error_clean_number_2 = random.randint(total_may_sell, int(total_may_sell*1.8))
+    error_clean_may_sell = random.randint(int(total_may_sell*0.2), int(total_may_sell*0.5))
     
-    return closest_match, int(next_month_1_prediction)+random_number_1, int(next_month_2_prediction)+random_number_2, total_may_sell
+    return closest_match, int(next_month_1_prediction)+error_clean_number_1, int(next_month_2_prediction)+random_number_2, total_may_sell-random_may_sell

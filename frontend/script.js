@@ -22,7 +22,7 @@ function renderChart(data) {
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['May', 'June', 'July'],
+            labels: ['June', 'July', 'August'],
             datasets: [{
                 label: 'Predicted Sales',
                 data: [data.may_sell, data.next_1, data.next_2],
