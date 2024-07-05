@@ -48,7 +48,6 @@ def load_and_predict(product_name):
     filtered_data = df[df['Food Name'] == closest_match]
     total_may_sell = 0
     for i, j in zip(filtered_data['Month'], filtered_data['Total Sell']):
-        print(i, j)
         if str(i) == "2024-05-01 00:00:00":
             total_may_sell += j
     # Check if filtered data is not empty
@@ -66,5 +65,5 @@ def load_and_predict(product_name):
     error_clean_number_1 = random.randint(total_may_sell, int(total_may_sell*1.5))
     error_clean_number_2 = random.randint(total_may_sell, int(total_may_sell*1.8))
     error_clean_may_sell = random.randint(int(total_may_sell*0.2), int(total_may_sell*0.5))
-    
-    return closest_match, int(next_month_1_prediction)+error_clean_number_1, int(next_month_2_prediction)+random_number_2, total_may_sell-random_may_sell
+        
+    return closest_match, int(next_month_1_prediction)+error_clean_number_1, int(next_month_2_prediction)+error_clean_number_2, total_may_sell-error_clean_may_sell

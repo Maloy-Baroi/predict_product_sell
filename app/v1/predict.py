@@ -19,7 +19,7 @@ def predict_next_sell(productBase: ProductBase):
         # Loading and predicting with the saved model
         closest_match, prediction_1, prediction_2, may_sales = load_and_predict(
             posted_product_name)
-        print(closest_match, prediction_1, prediction_2, may_sales)
+        print("All: ", closest_match, prediction_1, prediction_2, may_sales)
         prediction_1st_month_at_redis = False
         prediction_2nd_month_at_redis = False
         
